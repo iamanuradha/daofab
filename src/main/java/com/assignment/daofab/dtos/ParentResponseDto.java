@@ -10,4 +10,5 @@ public class ParentResponseDto {
   private String sender;
   private String receiver;
   private Long totalAmount;
+  private Long totalPaidAmount;
 }

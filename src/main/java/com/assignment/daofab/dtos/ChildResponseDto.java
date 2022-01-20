@@ -7,6 +7,8 @@ import lombok.Setter;
 @Setter
 public class ChildResponseDto {
   private Long id;
-  private Long parentId;
+  private String sender;
+  private String receiver;
+  private Long totalAmount;
   private Long paidAmount;
 }

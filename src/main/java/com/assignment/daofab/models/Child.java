@@ -7,7 +7,9 @@ import lombok.Setter;
 @Setter
 public class Child {
   private Long id;
-  private Long parentId;
+  private String sender;
+  private String receiver;
+  private Long totalAmount;
   private Long paidAmount;
-  private Parent parent;
+  private Long parentId;
 }

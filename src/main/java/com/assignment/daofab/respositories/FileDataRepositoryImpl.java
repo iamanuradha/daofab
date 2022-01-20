@@ -64,7 +64,10 @@ public class FileDataRepositoryImpl implements FileDataRepository {
     for (Child child : children) {
       Long parentId = child.getParentId();
       Parent parent = associations.get(parentId);
-      child.setParent(parent);
+      parent.setTotalPaidAmount(parent.getTotalPaidAmount() + child.getPaidAmount());
+      child.setReceiver(parent.getReceiver());
+      child.setSender(parent.getSender());
+      child.setTotalAmount(parent.getTotalAmount());
       List<Child> parentChildren = parent.getChildren();
       parentChildren.add(child);
     }
