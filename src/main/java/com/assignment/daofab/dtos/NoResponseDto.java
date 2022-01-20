@@ -8,6 +8,6 @@ import java.util.Date;
 public class NoResponseDto extends BaseDto {
 
   public NoResponseDto() {
-    super(0L, new Date());
+    super( 0, new Date());
   }
 }

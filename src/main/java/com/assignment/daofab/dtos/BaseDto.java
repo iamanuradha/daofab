@@ -8,6 +8,6 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 public abstract class BaseDto {
-  private final Long recordCount;
+  private final int records;
   private final Date timestamp;
 }

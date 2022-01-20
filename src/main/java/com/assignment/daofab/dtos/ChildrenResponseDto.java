@@ -11,8 +11,8 @@ public class ChildrenResponseDto extends BaseDto {
   private final List<EntityModel<ChildResponseDto>> children;
 
   public ChildrenResponseDto(
-      List<EntityModel<ChildResponseDto>> children, Long recordCount, Date timestamp) {
-    super(recordCount, timestamp);
+      List<EntityModel<ChildResponseDto>> children, Date timestamp) {
+    super(children.size(), timestamp);
     this.children = children;
   }
 }

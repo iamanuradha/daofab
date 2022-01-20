@@ -1,6 +1,7 @@
 package com.assignment.daofab.dtos;
 
 import lombok.Getter;
+import org.springframework.data.domain.Page;
 import org.springframework.hateoas.EntityModel;
 
 import java.util.Date;
@@ -8,11 +9,11 @@ import java.util.List;
 
 @Getter
 public class ParentsResponseDto extends BaseDto {
-  private final List<EntityModel<ParentResponseDto>> parents;
+  private final Page<EntityModel<ParentResponseDto>> parents;
 
   public ParentsResponseDto(
-      List<EntityModel<ParentResponseDto>> parents, Long recordCount, Date timestamp) {
-    super(recordCount, timestamp);
+      Page<EntityModel<ParentResponseDto>> parents, Date timestamp) {
+    super(parents.getNumberOfElements(), timestamp);
     this.parents = parents;
   }
 }
